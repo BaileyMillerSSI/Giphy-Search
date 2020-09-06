@@ -1,12 +1,15 @@
-import React from "react";
-import { Row, Col, Form, Layout, Space } from "antd";
-import SearchBox from "./feature/form/SearchBox";
-import RatingSelect from "./feature/form/RatingSelect";
-import Results from "./feature/results/Results";
-import "./App.css";
-import SiteFooter from "./feature/footer/Footer";
-const { Header, Content, Footer } = Layout;
+import './App.css';
 
+import { Col, Form, Layout, Row } from 'antd';
+import React from 'react';
+
+import SiteFooter from './feature/footer/Footer';
+import RatingSelect from './feature/form/RatingSelect';
+import SearchBox from './feature/form/SearchBox';
+import Results from './feature/results/Results';
+
+const { Header, Content, Footer } = Layout;
+ 
 const App = () => (
     <Layout className="bkgd_white">
       <Header className="bkgd_white">
