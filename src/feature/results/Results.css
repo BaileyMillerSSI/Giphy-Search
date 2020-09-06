@@ -1,0 +1,11 @@
+.results
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.result{
+    padding: 1rem;
+}

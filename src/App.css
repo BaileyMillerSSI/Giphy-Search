@@ -1,0 +1,15 @@
+.bkgd_white{
+    background-color: white;
+}
+
+.form
+{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer
+{
+    text-align: center;
+}
