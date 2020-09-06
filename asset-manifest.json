@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/BaileyMillerSSI/Giphy-Search/static/css/main.2e11281c.chunk.css",
+    "main.js": "/BaileyMillerSSI/Giphy-Search/static/js/main.268688cd.chunk.js",
+    "main.js.map": "/BaileyMillerSSI/Giphy-Search/static/js/main.268688cd.chunk.js.map",
+    "runtime-main.js": "/BaileyMillerSSI/Giphy-Search/static/js/runtime-main.2e922869.js",
+    "runtime-main.js.map": "/BaileyMillerSSI/Giphy-Search/static/js/runtime-main.2e922869.js.map",
+    "static/css/2.d4e7eff5.chunk.css": "/BaileyMillerSSI/Giphy-Search/static/css/2.d4e7eff5.chunk.css",
+    "static/js/2.c2f32047.chunk.js": "/BaileyMillerSSI/Giphy-Search/static/js/2.c2f32047.chunk.js",
+    "static/js/2.c2f32047.chunk.js.map": "/BaileyMillerSSI/Giphy-Search/static/js/2.c2f32047.chunk.js.map",
+    "index.html": "/BaileyMillerSSI/Giphy-Search/index.html",
+    "precache-manifest.a7b7657b8c0113ddeadf042f5ae9f1f2.js": "/BaileyMillerSSI/Giphy-Search/precache-manifest.a7b7657b8c0113ddeadf042f5ae9f1f2.js",
+    "service-worker.js": "/BaileyMillerSSI/Giphy-Search/service-worker.js",
+    "static/css/2.d4e7eff5.chunk.css.map": "/BaileyMillerSSI/Giphy-Search/static/css/2.d4e7eff5.chunk.css.map",
+    "static/css/main.2e11281c.chunk.css.map": "/BaileyMillerSSI/Giphy-Search/static/css/main.2e11281c.chunk.css.map",
+    "static/js/2.c2f32047.chunk.js.LICENSE.txt": "/BaileyMillerSSI/Giphy-Search/static/js/2.c2f32047.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e922869.js",
+    "static/css/2.d4e7eff5.chunk.css",
+    "static/js/2.c2f32047.chunk.js",
+    "static/css/main.2e11281c.chunk.css",
+    "static/js/main.268688cd.chunk.js"
+  ]
+}
