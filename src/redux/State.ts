@@ -1,4 +1,3 @@
-import moment from "moment";
 import { Filters } from "../models/Filters";
 import { Validation } from "../models/Validation";
 import { IGif } from '@giphy/js-types';

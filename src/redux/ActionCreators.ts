@@ -49,13 +49,6 @@ const handleSearch = debounce(
     if (isValid) {
       dispatch({ type: ActionTypes.SetLoading, value: true });
 
-      var requestOptions: RequestInit = {
-        method: 'POST',
-        headers: baseHeaders,
-        body: JSON.stringify(getState()?.filters),
-        redirect: 'follow'
-      };
-
       const result = await gf.search(searchText, {
         rating: rating,
         limit: 25,

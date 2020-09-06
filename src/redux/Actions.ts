@@ -1,7 +1,7 @@
 import { Dispatch } from "react";
 import { ThunkDispatch } from "redux-thunk";
 import { Validation } from "../models/Validation";
-import { Filters, Rating } from "../models/Filters";
+import { Rating } from "../models/Filters";
 import { IGif } from '@giphy/js-types';
 
 export type Actions =

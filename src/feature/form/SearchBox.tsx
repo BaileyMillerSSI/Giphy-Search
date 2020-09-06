@@ -1,5 +1,5 @@
 import React from "react";
-import { DispatchTypes, ActionTypes } from "../../redux/Actions";
+import { DispatchTypes } from "../../redux/Actions";
 import { State } from "../../redux/State";
 import { Form, Input } from "antd";
 import { connect } from "react-redux";
