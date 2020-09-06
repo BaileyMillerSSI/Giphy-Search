@@ -4,9 +4,13 @@
 
 .form
 {
-    padding-top: 1rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.space-top {
+    margin-top: 5rem;
 }
 
 .footer
