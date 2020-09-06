@@ -1,3 +1,5 @@
+![Deployment](https://github.com/BaileyMillerSSI/Giphy-Search/workflows/Deployment/badge.svg?branch=master)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
