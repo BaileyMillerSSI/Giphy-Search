@@ -17,6 +17,7 @@ const copySuccess = (text: string = "Copied to clipboard!") => {
 };
 
 const mapStateToProps = (state: State) => ({
+  canShare: navigator.share ? true: false
 });
 
 const mapDispatchToProps = (dispatch: DispatchTypes) => ({
@@ -34,7 +35,7 @@ const mapDispatchToProps = (dispatch: DispatchTypes) => ({
 type Props = ReturnType<typeof mapStateToProps> &
   ReturnType<typeof mapDispatchToProps> & IGif;
 
-const ImageCard = ({ id, title, images, user, onShareTarget }: Props) => {
+const ImageCard = ({ id, title, images, user, onShareTarget, canShare }: Props) => {
   const { original } = images;
   const { url } = original;
   return (
@@ -43,7 +44,7 @@ const ImageCard = ({ id, title, images, user, onShareTarget }: Props) => {
       style={{ width: 300 }}
       cover={<img alt={title} src={url} height={280} width={470} />}
       actions={[
-        <ShareAltOutlined onClick={()=> onShareTarget(title, url)} key="share-to"/>,
+        <ShareAltOutlined disabled={!canShare} onClick={()=> onShareTarget(title, url)} key="share-to"/>,
         <Tooltip
           title={`Copy ${
             title.length !== 0 ? title : "GIF"
