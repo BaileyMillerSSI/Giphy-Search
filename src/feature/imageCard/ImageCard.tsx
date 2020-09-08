@@ -11,7 +11,10 @@ import { State } from "../../redux/State";
 import { DispatchTypes } from "../../redux/Actions";
 import { connect } from "react-redux";
 import { downloadAndShare } from "../../api/DownloadAndShare";
+import './ImageCard.css';
 const { Meta } = Card;
+
+
 
 const copySuccess = (text: string = "Copied to clipboard!") => {
   message.success(text);
@@ -37,7 +40,13 @@ const ImageCard = ({ id, title, images, user, onShareTarget, canShare }: Props) 
       style={{ width: 300 }}
       cover={<img alt={title} src={url} height={280} width={470} />}
       actions={[
-        <ShareAltOutlined disabled={!canShare} onClick={()=> onShareTarget(title, url)} key="share-to"/>,
+        <ShareAltOutlined disabled={!canShare} className={!canShare ? "disabled_icon" : ""} onClick={() => 
+          {
+            if (canShare) {
+              onShareTarget(title, url)
+            }
+          }
+        } key="share-to"/>,
         <Tooltip
           title={`Copy ${
             title.length !== 0 ? title : "GIF"
