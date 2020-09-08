@@ -6,10 +6,11 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { IGif } from "@giphy/js-types";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { State } from "../../redux/State";
 import { DispatchTypes } from "../../redux/Actions";
 import { connect } from "react-redux";
+import { downloadAndShare } from "../../api/DownloadAndShare";
 const { Meta } = Card;
 
 const copySuccess = (text: string = "Copied to clipboard!") => {
@@ -21,15 +22,7 @@ const mapStateToProps = (state: State) => ({
 });
 
 const mapDispatchToProps = (dispatch: DispatchTypes) => ({
-  onShareTarget: async (title: string, url: string) => {
-    if(navigator.share){
-      await navigator.share({
-        title: title,
-        text:'Checkout this GIF',
-        url: url
-      });
-    }
-  }
+  onShareTarget: async (title: string, url: string) => await downloadAndShare(title, url)
 });
 
 type Props = ReturnType<typeof mapStateToProps> &
