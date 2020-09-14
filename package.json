@@ -47,6 +47,7 @@
     "antd": "^4.6.2",
     "lodash": "^4.17.20",
     "react-copy-to-clipboard": "^5.0.2",
+    "react-infinite-scroller": "^1.2.4",
     "react-redux": "^7.2.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"

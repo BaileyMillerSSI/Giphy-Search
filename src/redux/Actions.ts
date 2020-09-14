@@ -12,6 +12,9 @@ export type Actions =
     | { type: ActionTypes.SetSearchText, value: string}
     | {type: ActionTypes.SetRating, value: Rating}
     | { type: ActionTypes.SetResults, value: IGif[]}
+    | { type: ActionTypes.SetNewResults, value: IGif[]}
+    | { type: ActionTypes.SetHasMore, value: boolean}
+
 
 export enum ActionTypes {
     ResetFilters = 'RESET_FILTERS',
@@ -20,7 +23,9 @@ export enum ActionTypes {
     SetValid = 'SET_VALID',
     SetSearchText = 'SET_SEARCH_TEXT',
     SetRating = 'SET_RATING',
-    SetResults = 'SET_RESULTS'
+    SetResults = 'SET_RESULTS',
+    SetNewResults = 'SET_NEW_RESULTS',
+    SetHasMore = 'SET_HAS_MORE'
 }
 
 export type DispatchTypes = Dispatch<Actions> & ThunkDispatch<{}, {}, Actions>;

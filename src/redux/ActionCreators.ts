@@ -23,13 +23,21 @@ export const runFiltersValidation = () => (
   dispatch({ type: ActionTypes.SetValid, value: validation });
 };
 
+export const loadMore = () => async (
+  dispatch: DispatchTypes,
+  getState: () => State
+) => {
+  
+  await handleSearch(dispatch, getState, false);
+};
+
 export const updateSearchText = (value: string) => async (
   dispatch: DispatchTypes,
   getState: () => State
 ) => {
   dispatch({ type: ActionTypes.SetSearchText, value: value });
 
-  await handleSearch(dispatch, getState);
+  await handleSearch(dispatch, getState, true);
 };
 
 export const updateRating = (value: Rating) => async (
@@ -38,12 +46,12 @@ export const updateRating = (value: Rating) => async (
 ) => {
   dispatch({ type: ActionTypes.SetRating, value: value });
 
-  await handleSearch(dispatch, getState);
+  await handleSearch(dispatch, getState, false);
 };
 
 const handleSearch = debounce(
-  async (dispatch: DispatchTypes, getState: () => State) => {
-    const { isValid } = getState();
+  async (dispatch: DispatchTypes, getState: () => State, clearResults: boolean) => {
+    const { isValid, results } = getState();
     const { searchText, rating } = getState().filters;
 
     if (isValid) {
@@ -52,10 +60,16 @@ const handleSearch = debounce(
       const result = await gf.search(searchText, {
         rating: rating,
         limit: 25,
-        sort: 'relevant'
+        sort: 'relevant',
+        offset: results.length
       });
 
-      dispatch({ type: ActionTypes.SetResults, value: result.data });
+      dispatch({type: ActionTypes.SetHasMore, value: result.pagination.total_count !== results.length});
+      if(clearResults){
+        dispatch({ type: ActionTypes.SetNewResults, value: result.data });
+      }else{
+        dispatch({ type: ActionTypes.SetResults, value: result.data });
+      }
       dispatch({ type: ActionTypes.SetLoading, value: false });
     }
   },

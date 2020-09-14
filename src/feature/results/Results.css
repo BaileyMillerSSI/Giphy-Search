@@ -1,11 +1,9 @@
-.results
-{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+.scroll-container {
+    overflow: auto;
+  padding: 8px 24px;
 }
 
-.result{
-    padding: 1rem;
+.ant-row {
+    display: flex;
+    justify-content: center;
 }

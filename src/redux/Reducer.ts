@@ -9,6 +9,11 @@ export const Reducer = (
     case ActionTypes.SetResults:
       return {
         ...state,
+        results: [...state.results, ...action.value]
+      }
+    case ActionTypes.SetNewResults:
+      return {
+        ...state,
         results: action.value
       }
     case ActionTypes.SetSearchText:
@@ -49,6 +54,11 @@ export const Reducer = (
         },
         isValid: action.value.isTextValid,
       };
+    case ActionTypes.SetHasMore:
+      return {
+        ...state,
+        hasMore: action.value
+      }
     default:
       return state;
   }
